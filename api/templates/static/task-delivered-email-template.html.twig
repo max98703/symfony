@@ -1,0 +1,16 @@
+{% extends 'email-layout.html.twig' %}
+{% block content %}
+
+    <div class="heading px-30" style="text-align: center; padding-top: 30px;">
+        <h1>Task Completion - {{ task.title }}</h1>
+    </div>
+    <div class="content px-30">
+        <p>We are delighted to inform you that the task specified below has been completed:</p>
+        <p>
+            Project Name: {{ task.project.name }} <br>
+            Task Name: {{ task.title }} <br>
+            Aggregate: {{ task.aggregate.name }} <br>
+            Tonnage: {{ task.actualTonnage }} <br>
+        </p>
+    </div>
+{% endblock %}

@@ -1,0 +1,17 @@
+materials:
+  - name: Gravel
+    description: "A coarse material that is used for road surfacing, concrete production, and drainage systems"
+  - name: Sand
+    description: "A fine material that is used for concrete production, masonry, and plastering"
+  - name: Recycled concrete
+    description: "A material that is produced from crushed concrete and used for road base, general fill, and drainage applications"
+  - name: Slag
+    description: "A byproduct of iron and steel production that is used for road construction, cement production, and as a soil conditioner"
+  - name: Topsoil
+    description: "A material that is used for landscaping, gardening, and as a base for roads and driveways"
+  - name: Ballast
+    description: "A material that is used for railway tracks, road construction, and as a foundation for buildings"
+  - name: Type 1 MOT
+    description: "A material that is used for road construction, driveways, and as a sub-base for building foundations"
+  - name: Geosynthetic aggregates
+    description: "Synthetic products that are used in civil engineering projects to stabilize terrain"

@@ -1,0 +1,22 @@
+{% extends 'email-layout.html.twig' %}
+{% block content %}
+<div class="heading px-30" style="text-align: center; padding-top: 30px;">
+    <h1>Task Proposal</h1>
+</div>
+<div class="content px-30">
+    <p>Dear {{ task.member.name }},</p>
+
+    <p> Your
+        {{ task.title }} has been {{ task.taskProposal == 1 ? 'Accepted' : (task.taskProposal == 3 ? 'Partially Accepted': 'Rejected') }} by {{ task.company.name }}
+    </p>
+
+    <div>
+        {% if task.taskProposal == 3 %}
+           <h3>Description of a task that has been partially accepted.</h3>
+            <p>{{ task.proposalDescription }}</p>
+            <p>Accepted Tonnage: {{ task.actualTonnage }}</p>
+        {% endif %}
+    </div>
+
+</div>
+{% endblock %}

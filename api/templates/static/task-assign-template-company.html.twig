@@ -1,0 +1,24 @@
+{% extends 'email-layout.html.twig' %}
+
+{% block content %}
+    <div class="heading px-30" style="text-align: center; padding-top: 30px;">
+        <h1>Task Assigned</h1>
+    </div>
+    <div class="content px-30">
+        <p>Dear {{ task.company.name }},</p>
+
+        <p>{{ task.title }} has been assigned by {{ task.member.name }}, tonnage {{ task.tonnage }},
+            aggregate {{ task.aggregate.name }} </p>
+
+        {% for address in task.taskAddress %}
+            <p>
+                <span>
+                    <b>{{ address.addressType == 0 ? "From Address" : "To Address" }}</b>
+                </span>
+                <br>
+                <span> {{ address.addressLine1 }}, {{ address.city }}, {{ address.state }}, {{ address.zip }}, {{ address.country }}</span>
+            </p>
+        {% endfor %}
+
+    </div>
+{% endblock %}

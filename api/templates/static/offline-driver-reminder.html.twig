@@ -1,0 +1,19 @@
+{% extends 'email-layout.html.twig' %}
+
+{% block content %}
+    <div class="heading px-30" style="text-align: center; padding-top: 30px;">
+    <h1>Reminder to be online</h1>
+    </div>
+    <div class="content px-30">
+    <p>Please login and be available for your assigned tasks. Your cooperation is appreciated. Contact us if you encounter any issues. Thank you!</p>
+    <h2>Assigned Tasks</h2>
+    <p>
+        Here is a quick update on your assigned tasks. Please review the following: <br>
+        {% for task in pendingTask %}
+                {{ loop.index }}. {{ task.title }}<br>
+        {% endfor %}
+        If you have any questions or need further information, please don't hesitate to reach out to us. <br>
+        Thank you for your attention to these assignments. Your commitment to their timely completion is vital to the success of our project.
+    </p>
+    </div>
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends 'email-layout.html.twig' %}
+
+{% block content %}
+<div class="container">
+    <h1>Join Our Team of Drivers! Discover the power of HaulinAgg</h1>
+    <p>Dear {{ name }},</p>
+
+    <p>We hope this email finds you well. At {{ company }}, we're delighted to unveil our latest innovation – the all-new Driver App, exclusively designed to enhance the experience for drivers like you. Join us as we revolutionize and simplify your journey on the road!</p>
+
+    <p>Our Driver App brings a range of powerful features and benefits to make your trucking journey smoother, more efficient, and more rewarding.:</p>
+   <p>Here's what you can expect:</p>
+    <ol>
+        <li><b>Effortless Load Management:</b> Manage your loads with ease, right from your mobile device. Transition from paperwork to a digital workflow for a hassle-free experience.</li>
+        <li><b>Real-Time Updates: </b> Stay updated with real-time notifications about load status, including pickup and delivery alerts, route modifications, and crucial updates. Stay ahead of the curve.</li>
+        <li><b>Optimized Navigation:</b> Benefit from turn-by-turn navigation tailored specifically for truck drivers. Save both time and fuel with accurate, truck-friendly routes.</li>
+        <li><b>Document Uploads:</b> Upload essential documents quickly and securely from your phone, eliminating the need for physical paperwork. Keep everything organized and within reach.</li>
+        <li><b>Support and Assistance:</b> Reach out to our dedicated support team directly from the app. We’re here to answer your queries, provide guidance, and ensure a smooth experience.</li>
+    </ol>
+
+    <p>Getting started with our Driver App is simple:</p>
+
+    <ol>
+        <li>Download the <strong>HaulinAgg</strong> from the App Store or Google Play Store.</li>
+        <li>After your email gets confirmed, you can set your password.</li>
+        <li>Sign in using email: <i><b>{{ username }}</b> </i></li>
+        <li>Explore the app's features and gear up to elevate your trucking experience!</li>
+    </ol>
+
+    <p style="margin-top: 10px; margin-bottom: 10px;text-align: center">
+        <a class="button" style="background-color: #1F83FF;padding: 8px 12px; border: 1px solid #1F83FF;border-radius: 2px;font-family: Arial, Helvetica, sans-serif;font-size: 14px; color: #fff;text-decoration: none;font-weight:bold;display: inline-block;" href="{{ 'https://sudo.haulinagg.net/setPassword/' ~ token }}">
+            Verify Email
+        </a>
+    </p>
+
+    <p>We're excited to have you join our team of drivers using the <strong>HaulinAgg</strong>.
+        Experience the convenience and efficiency it offers, and be a part of our continued commitment to excellence in
+        the industry.</p>
+
+    <p>If you have any questions or need assistance, please don't hesitate to reach out to our support team at {{ phoneNumber }}.</p>
+
+    <p>Thank you for being a valuable member of our driver community. We look forward to delivering a superior trucking
+        experience together!</p>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends 'email-layout.html.twig' %}
+
+{% block content %}
+    <h3>Dear {{ member.name }},</h3>
+
+    <div>
+        Welcome to HaulinAggs! We’re excited to help you streamline your project and task management with our app, designed for easy project creation, task assignments, and seamless collaboration with trucking companies.
+        <br><br>
+        Get Started in 3 Simple Steps:
+        <br><br>
+        Download the App:  Play Store: <a href="{{ playStore }}">{{ playStore }}</a> App Store: <a href="{{ appStore }}">{{ appStore }}</a> <br>
+        Register: using <i>{{ member.email }} email</i> set up your profile, choice business type customer and start creating projects. <br>
+        Explore Features: Discover tools for real-time updates, communication, and performance tracking. br
+        Need help? Contact us at info@haulinaggs.net. <br>
+        <br><br>
+        <b>Task information: </b><br>
+        <p>{{ task.title }} has been created by {{ task.company.name }}, tonnage {{ task.tonnage }},
+            aggregate {{ task.aggregate.name }} </p>
+
+        {% for address in task.taskAddress %}
+            <p>
+                    <span>
+                        <b>{{ address.addressType == 0 ? "From Address" : "To Address" }}</b>
+                    </span>
+                <br>
+                <span> {{ address.addressLine1 }}, {{ address.city }}, {{ address.state }}, {{ address.zip }}, {{ address.country }}</span>
+            </p>
+        {% endfor %}
+
+        <br><br>
+        Thank you for choosing HaulinAggs!
+        <br><br>
+        Best regards,
+    </div>
+{% endblock %}
+

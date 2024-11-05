@@ -1,0 +1,17 @@
+{% extends 'email-layout.html.twig' %}
+
+{% block content %}
+    <div class="heading px-30" style="text-align: center; padding-top: 30px;">
+        <h1>Email verification</h1>
+    </div>
+    <div class="content px-30">
+        <p>Dear {{ name }},</p>
+        <p>Thank you for choosing HaulinAgg for your transportation needs. To ensure the security of your account, please click the link below to verify your email address:</p>
+        <a class="button" href="{{ 'https://sudo.haulinagg.net/setPassword/' ~ token }}" style="background-color: #1F83FF;padding: 8px 12px; border: 1px solid #1F83FF;border-radius: 2px;font-family: Arial, Helvetica, sans-serif;font-size: 14px; color: #fff;text-decoration: none;font-weight:bold;display: inline-block;">
+            Verify Email
+        </a>
+        <p>By verifying your email, you'll have access to all the features and updates related to your HaulinAgg account.</p>
+        <p>If you didn't create an account with us, please disregard this message.</p>
+        <p>Thank you for choosing HaulinAgg!</p>
+    </div>
+{% endblock %}

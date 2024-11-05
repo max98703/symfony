@@ -1,0 +1,17 @@
+{% extends 'email-layout.html.twig' %}
+
+{% block content %}
+    <h1>Dear {{ projects[0]['memberName'] }},</h1>
+
+    <p>
+        Here is a compiled list of projects that exceed your specified total tonnage threshold of 80%. <br>
+        Below are the details:</p>
+    <hr>
+    <p>
+        {% for project in projects %}
+            {{ loop.index }}: Project Name: {{ project['name'] }}, Total Tonnage: {{ project['tonnage'] }} T, Total used tonnage:  {{ project['usedTonnage']}} T <br>
+        {% endfor %}
+    </p>
+    
+{% endblock %}
+
